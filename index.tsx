@@ -1,0 +1,1 @@
+// This file is deprecated. The project has been migrated to static HTML/JS.

@@ -1,0 +1,8 @@
+[
+  { "title": "AuraUI — Minimal UI Kit", "live": "https://example.com/aura-ui" },
+  { "title": "Tasklight — Focus Timer", "live": "https://example.com/tasklight" }
+
+  /* Add more like this:
+  ,{ "title": "New Project Name", "live": "https://your-live-link.com" }
+  */
+]

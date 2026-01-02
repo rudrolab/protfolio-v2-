@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShortPort Dev | Rudro Kalix</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Import map for Gemini SDK -->
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@0.0.2"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span class="scroll-text">SCROLL</span>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="about-top">
+            <div class="code-particles" id="particles">
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-node"></i>
+                <i class="fa-solid fa-database"></i>
+                <i class="fa-solid fa-code"></i>
+                <i class="fa-brands fa-git-alt"></i>
+                <i class="fa-brands fa-docker"></i>
+            </div>
+
+            <div class="about-container">
+                <div class="profile-wrapper">
+                    <img src="https://github.com/rudro-kalix.png" alt="Rudro Kalix" class="profile-pic">
+                </div>
+                
+                <h1 class="text-gradient" style="font-size: var(--fs-hero); margin: 1rem 0;">Rudro Kalix</h1>
+                <h2 class="intro-subtitle">Full Stack Developer & AI Enthusiast</h2>
+                <p class="intro-description">
+                    Building scalable web applications and exploring the frontiers of artificial intelligence. 
+                    Focused on creating intuitive, high-performance user experiences.
+                </p>
+
+                <div class="hero__cta">
+                    <a href="#" id="portfolioLink" class="btn" target="_blank">Full Portfolio</a>
+                    <a href="#contact" class="btn btn--ghost">Contact Me</a>
+                </div>
+
+                <ul class="socials">
+                    <li><a href="#" id="githubLink" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="#" id="linkedinLink" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="#" id="twitterLink" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" id="facebookLink" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" id="whatsappLink" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="#" id="emailLink" aria-label="Email"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section id="journey" class="section">
+             <div class="journey-header">
+                 <div class="journey-title">
+                     <h2>My Journey</h2>
+                     <p>Education & Milestones</p>
+                 </div>
+             </div>
+
+             <div id="journeyTimeline" class="timeline">
+                <div class="milestone" data-step="1">
+                    <div class="milestone-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="milestone-content">
+                        <span class="milestone-date">2020 - 2024</span>
+                        <h3>B.Sc. in Computer Science</h3>
+                        <p>Daffodil International University</p>
+                        <div class="sgpa-badge">CGPA: 3.85</div>
+                    </div>
+                </div>
+                <div class="milestone" data-step="2">
+                    <div class="milestone-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="milestone-content">
+                        <span class="milestone-date">2023 - Present</span>
+                        <h3>Frontend Engineer</h3>
+                        <p>Tech Solutions Ltd.</p>
+                        <p class="ongoing-text">Currently working here</p>
+                    </div>
+                </div>
+                <div class="milestone" data-step="3">
+                    <div class="milestone-icon"><i class="fa-solid fa-code-branch"></i></div>
+                    <div class="milestone-content">
+                        <span class="milestone-date">2024</span>
+                        <h3>Open Source Contributor</h3>
+                        <p>Contributing to various React & AI ecosystems.</p>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="projects-box">
+                <h2>Featured Projects</h2>
+                <input type="text" id="searchInput" placeholder="Search projects...">
+                <div id="projectsGrid" class="grid">
+                    <!-- Populated by script.js -->
+                    <div class="card"><h3>Loading...</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-content">
+                <h2>Get In Touch</h2>
+                <p class="contact-subtitle">Have a project in mind or just want to say hi?</p>
+                <div style="margin-bottom: 2rem;">
+                    <a href="#" id="emailCta" class="btn btn--contact">
+                        <i class="fa-solid fa-paper-plane"></i> Send an Email
+                    </a>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" id="cfName" placeholder="Name" required>
+                        <input type="email" id="cfEmail" placeholder="Email" required>
+                    </div>
+                    <textarea id="cfMessage" rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn btn--ghost" style="width:100%; justify-content:center;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Rudro Kalix. Built with <i class="fa-solid fa-heart" style="color:var(--brand)"></i> and HTML/CSS.</p>
+    </footer>
+
+    <!-- AI Chatbot Widget -->
+    <div class="chat-widget">
+        <div class="chat-window hidden" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <span>AI Assistant</span>
+                </div>
+                <button id="closeChat" aria-label="Close Chat">×</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    Hello! I'm Rudro's AI assistant. Ask me anything about his projects, skills, or experience!
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask a question..." autocomplete="off">
+                <button id="sendChat" aria-label="Send"><i class="fa-solid fa-arrow-up"></i></button>
+            </div>
+        </div>
+        <button class="chat-toggle" id="toggleChat" aria-label="Open AI Chat">
+            <i class="fa-solid fa-message"></i>
+        </button>
+    </div>
+
+    <!-- Main Logic Script (Module for Imports) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
